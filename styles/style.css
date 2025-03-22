@@ -454,7 +454,7 @@
 
   .gallery-content {
     margin: 0;
-    margin-block-end: 38px;
+    margin-block-end: 41px;
   }
 
   .gallery {
@@ -487,6 +487,6 @@
   }
 
   .footer-title {
-    padding-block-start: 7px;
+    padding-block-start: 3px;
   }
 }
