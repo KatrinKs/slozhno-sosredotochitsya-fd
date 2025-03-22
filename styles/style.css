@@ -1,33 +1,25 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 /* BODY */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--bg-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* inline-size: 1024px; */
   padding: 0 20px;
 }
 
 /* HEADER */
 
 .header {
-  position: relative;
-
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  /* justify-content: end; */
   align-items: center;
-  grid-template-areas: 
-  "header__theme-menu"
-  "header-title"
-  "intro";
+  grid-template-areas:
+    "header__theme-menu"
+    "header-title"
+    "intro";
   block-size: 100vh;
-  /* margin-block-end: 60px; */
   margin-block-end: 90px;
 }
 
@@ -36,9 +28,8 @@
 }
 
 .decorated-zone::before,
-.decorated-zone::after 
-{
-  content: '';
+.decorated-zone::after {
+  content: "";
   position: absolute;
   inline-size: var(--decorated-size);
   block-size: var(--decorated-size);
@@ -69,13 +60,12 @@
 }
 
 .rec::before {
-  content: 'REC';
+  content: "REC";
   position: absolute;
 
   inset-block-start: 20px;
   inset-inline-end: 28px;
 
-  font-family: var(--rec-text-font, monospace);
   font-weight: var(--font-weight-normal);
   font-size: var(--rec-text-size);
   line-height: var(--rec-line-height);
@@ -84,7 +74,7 @@
 }
 
 .rec::after {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: var(--rec-point-size);
   block-size: var(--rec-point-size);
@@ -94,7 +84,7 @@
 
   box-shadow: 0px 0px 4px 2px var(--rec-color);
   border-radius: 50%;
-  background-color: var(--rec-color); 
+  background-color: var(--rec-color);
 }
 
 .header__theme-menu {
@@ -113,8 +103,7 @@
 .header__theme-menu-button {
   block-size: 26px;
   padding: 0 13px;
-  font-family: var(--main-font-family, monospace);
-  font-size: var(--main-text-size);
+
   font-weight: var(--font-weight-normal);
   line-height: 18px;
   text-align: center;
@@ -124,7 +113,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid #FF007066;
+  border: 1px solid #ff007066;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -139,30 +128,26 @@
 
 .header-title {
   grid-area: header-title;
-
-  justify-content: start;
   margin-inline-start: -20px;
   padding-block-start: 33px;
 
-  font-family: var(--main-font-family, monospace);
   font-size: var(--title-size);
   font-weight: var(--font-weight-bold);
   line-height: 83%;
-  
+
   color: var(--header-title-color);
   text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 .intro {
   grid-area: intro;
-  
+
   justify-self: end;
   max-inline-size: 50%;
   margin-block-start: 7px;
 }
 
 .title-decor {
-  font-size: var(--main-text-size);
   font-weight: var(--font-weight-bold);
   line-height: var(--main-line-height);
   color: var(--title-color);
@@ -183,19 +168,10 @@
 
 .what {
   grid-template-rows: min-content 1fr;
-  gap: 20px;
 }
 
 .how {
   grid-template-columns: 1fr 2.06fr;
-}
-
-.section-title {
-  font-family: var(--main-font-family,monospace);
-  font-size: var(--main-text-size);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--main-line-height);
-  color: var(--accent-color);
 }
 
 .portrait-orientation {
@@ -212,19 +188,11 @@
 }
 
 .card__text {
-  font-family: var(--main-font-family, monospace);
-  font-size: var(--main-text-size);
-  font-weight: var(--font-weight-normal);
   line-height: var(--main-line-height);
-  color: var(--main-text-color);
 }
 
 .link-decor {
-  font-family: var(--main-font-family, monospace);
-  font-size: var(--main-text-size);
-  font-weight: var(--font-weight-normal);
   line-height: 100%;
-  color: var(--main-text-color);
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--shadow-color);
   cursor: pointer;
@@ -242,9 +210,7 @@
 }
 
 .block-list {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(314px, 1fr));
-  gap: var(--section-gap);
 }
 
 .card__subtitle {
@@ -260,7 +226,7 @@
 
 .gallery-content {
   display: grid;
-  grid-template-rows: min-content 1fr;  
+  grid-template-rows: min-content 1fr;
   margin-block-end: 60px;
 }
 
@@ -285,6 +251,7 @@
   display: block;
   inline-size: 100%;
   block-size: 100%;
+  max-block-size: 100%;
   object-fit: cover;
 }
 
@@ -319,7 +286,6 @@
 
   padding-block-start: 33px;
 
-  font-family: var(--main-font-family, monospace);
   font-size: var(--title-size);
   font-weight: var(--font-weight-bold);
   line-height: 83%;
@@ -336,12 +302,12 @@
 }
 
 @media (width > 2000px) {
-
   :root {
     --main-text-size: 26px;
     --title-size: clamp(7.25rem, 5.9535rem + 5.5319vw, 14.5625rem);
     --decorated-size: 70px;
   }
+
   .page {
     inline-size: 1024px;
   }
@@ -357,7 +323,7 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (width >=1024px) {
   .page {
     inline-size: 1024px;
   }
@@ -426,7 +392,7 @@
   .how {
     gap: 27px;
   }
-  
+
   .portrait-orientation {
     inline-size: 17%;
   }
@@ -438,8 +404,6 @@
   .footer-title {
     padding-block-start: 0;
   }
-
-  
 }
 
 @media (width < 768px) {
@@ -455,7 +419,7 @@
   .decorated-zone::before {
     inset-block-start: 10px;
   }
-  
+
   .decorated-zone::after {
     inset-block-end: 10px;
   }
@@ -485,7 +449,7 @@
   }
 
   .concentration {
-    margin:0 0 50px 0;
+    margin: 0 0 50px 0;
     gap: 20px;
   }
 
@@ -506,14 +470,13 @@
     margin: 0;
     margin-block-end: 38px;
   }
-  
+
   .gallery {
     grid-template-columns: 1fr;
-    /* grid-template-rows: repeat(auto-fill, minmax(min, 355px)); */
     grid-template-rows: none;
     gap: 10px;
   }
-  
+
   .card__title-gallery {
     margin-block-end: 8px;
   }
@@ -521,38 +484,20 @@
   .gallery__img {
     object-fit: contain;
   }
-  
+
   .gallery__element:nth-child(1) {
     grid-column: 1;
   }
-  
+
   .gallery__element:nth-child(2) {
     grid-column: 1;
   }
-  
+
   .gallery__element:nth-child(3) {
     grid-column: 1;
   }
-  
+
   .gallery__element:nth-child(5) {
     grid-column: 1;
   }
 }
-
-
-
-/* @media (width >= 375px) {
-  .section-content-inline {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, minmax(355px, 1fr));
-    gap: 10px;
-    margin-block-end: 50px;
-  } 
-
-  .section-content-block {
-    grid-template-rows: 1fr;
-    grid-template-columns: min-content, repeat(auto-fill, minmax(355px, 1fr));
-    gap: 10px;
-    margin-block-end: 50px;
-  }
-} */
