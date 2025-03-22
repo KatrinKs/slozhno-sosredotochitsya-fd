@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --bg-img: url(/images/cover-image-dark.png);
+  --bg-img: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --accent-color: #FF0070;
   --nav-bg-color: #FF0070;
@@ -32,4 +32,19 @@
   --main-line-height: 23.4px;
   --main-font-family: 'IBM Plex mono';
   --main-text-color: #F1B2CE;
+  --hover-color: #ff007066;
+}
+
+@media (width > 2000px) {
+  :root {
+    --main-text-size: 26px;
+    --title-size: clamp(7.25rem, 5.9535rem + 5.5319vw, 14.5625rem);
+    --decorated-size: 70px;
+  }
+}
+
+@media (orientation: portrait) {
+  :root {
+    --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }
