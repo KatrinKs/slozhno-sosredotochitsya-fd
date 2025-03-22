@@ -310,14 +310,13 @@
   block-size: 100vh;
   display: grid;
   justify-content: center;
+  align-items: center;
 }
 
 .footer-title {
   position: relative;
   display: grid;
 
-  block-size: 100vh;
-  align-items: center;
   padding-block-start: 33px;
 
   font-family: var(--main-font-family, monospace);
@@ -329,6 +328,12 @@
 }
 
 /* MEDIA */
+
+@supports (block-size: 100dvb) {
+  .footer {
+    block-size: 100dvb;
+  }
+}
 
 @media (width > 2000px) {
 
@@ -368,6 +373,10 @@
   .intro {
     margin-block-start: 0;
     margin-block-end: 19px;
+  }
+
+  .gallery-content {
+    margin-block-end: 60px;
   }
 
   .footer-title {
