@@ -57,7 +57,7 @@
   border-block-end: var(--decorated-border) solid var(--decorated-color);
 
   inset-inline-start: 0;
-  inset-block-end: -10px;
+  inset-block-end: 20px;
 }
 
 .theme-light .rec {
