@@ -233,10 +233,7 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 0fr);
-  grid-auto-flow: dense;
   gap: var(--section-gap);
-  box-sizing: border-box;
 }
 
 .card__title-gallery {
@@ -473,7 +470,6 @@
 
   .gallery {
     grid-template-columns: 1fr;
-    grid-template-rows: none;
     gap: 10px;
   }
 
