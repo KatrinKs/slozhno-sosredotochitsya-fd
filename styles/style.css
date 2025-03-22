@@ -490,7 +490,8 @@
   }
 
   .portrait-orientation {
-    inline-size: 73%;
+    /* inline-size: 73%; */
+    inline-size: 100%;
   }
 
   .why {
@@ -503,7 +504,7 @@
 
   .gallery-content {
     margin: 0;
-    margin-block-end: 40px;
+    margin-block-end: 38px;
   }
   
   .gallery {
@@ -514,7 +515,7 @@
   }
   
   .card__title-gallery {
-    margin-block-end: 10px;
+    margin-block-end: 8px;
   }
 
   .gallery__img {
